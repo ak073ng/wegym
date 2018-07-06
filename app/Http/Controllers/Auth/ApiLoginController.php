@@ -52,8 +52,6 @@ class ApiLoginController extends Controller
 
         }
 
-        
-
         // $token = JWTAuth::attempt($credentials);
 
         // if ($token) {

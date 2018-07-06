@@ -28,6 +28,12 @@ class ApiRegisterController extends RegisterController
 
         $this->guard()->login($user);
 
-        return response(['user' => $user]);
+        //return response(['user' => $user]);
+
+        return response()->json([
+            'user' => $user,
+            'result' => 'success',
+            'message' => 'Authentication succesful'
+            ]);
     }
 }
