@@ -31,7 +31,7 @@ class ApiRegisterController extends RegisterController
         //return response(['user' => $user]);
 
         return response()->json([
-            'user' => $user,
+            'response' => $user,
             'result' => 'success',
             'message' => 'Authentication succesful'
             ]);
