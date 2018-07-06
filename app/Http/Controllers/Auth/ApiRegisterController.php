@@ -21,17 +21,16 @@ class ApiRegisterController extends RegisterController
 
         if(count($errors))
         {
-                return response()->json([
-                    'response' => $errors,
-                    'result' => 'failure',
-                    'message' => 'Authentication failed! - 401'
-                    ]);
+            return response()->json([
+                'response' => $errors,
+                'result' => 'failure',
+                'message' => 'Authentication failed! - 401'
+                ]);
         }
 
         event(new Registered($user = $this->create($request->all())));
 
         //$this->guard()->login($user);
-
         //return response(['user' => $user]);
 
         return response()->json([

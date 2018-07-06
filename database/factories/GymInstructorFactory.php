@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 $factory->define(App\GymInstructor::class, function (Faker $faker) {
     return [
         'name' =>$faker->name,
-        'image' =>$faker->image($dir = storage_path('app/public/images'), $width = 500, $height = 500),
+        'image' =>$faker->imageUrl($width = 500, $height = 500),
         'contact' =>$faker->e164PhoneNumber,
         'email' =>$faker->email,
         'gender' =>$faker->randomElement($array = array ('male','female')),
